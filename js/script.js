@@ -14,3 +14,41 @@ function showImg(n) {
         image.src = "img/4.jpg";
     }
 }
+
+function fileValidation(){
+    var fileInput = document.getElementById('uploadImage');
+    var filePath = fileInput.value;
+    var allowedExtensions = /(\.jpg|\.jpeg|\.png)$/i;
+    if(!allowedExtensions.exec(filePath)){
+        alert('Please upload file having extensions .jpeg/.jpg/.png only.');
+        fileInput.value = '';
+        return false;
+    }else{
+        //Image preview
+        var image = document.getElementById("car-big-image");
+        if (fileInput.files && fileInput.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                image.src = e.target.result;
+            };
+            reader.readAsDataURL(fileInput.files[0]);
+        }
+    }
+}
+
+function carPlateUpper() {
+    return "ঢাকা মেট্রো - গ";
+}
+
+function carPlateLower() {
+    return "৩৫ - ৭৬৭০";
+}
+
+function getPlate() {
+    return "img/1.jpg";
+}
+
+document.getElementById("carPlateUpper").innerHTML = carPlateUpper();
+document.getElementById("carPlateLower").innerHTML = carPlateLower();
+
+document.getElementById("numberPlate").src = getPlate();

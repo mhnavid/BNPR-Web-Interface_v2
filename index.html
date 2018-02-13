@@ -11,20 +11,19 @@
     <script src="js/jquery-3.2.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/script.js"></script>
 
 
 </head>
 <body>
 
-<div class="pos-f-t">
+<div class="pos-f-t fixed-top">
     <div class="collapse" id="navbarToggleExternalContent">
         <div class="bg-dark p-4">
             <h4 class="text-primary">About</h4>
             <span class="text-muted">Toggleable via the navbar brand.</span>
         </div>
     </div>
-    <nav class="navbar  navbar-dark bg-dark">
+    <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand text-white font-weight-bold" href="#">BNPR</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -42,7 +41,7 @@
                         <img src="img/1.jpg"/>
                     </label>
                     <!--show image in main frame-->
-                    <img id="car-big-image" >
+                    <img class="rounded" id="car-big-image">
 
                     <!--Lets show the second image by default on page load-->
                     <input type="radio" name="slide_switch" id="id2" checked="checked"/>
@@ -69,6 +68,52 @@
         </div>
     </div>
 </div>
+
+<div class="container">
+    <div class="row">
+        <div class="bottom-content-view">
+            <div class="col">
+                <div class="test-image-upload">
+                    <p class="test-image-title text-muted">
+                        <span>Upload an image</span>
+                    </p>
+                    <div class="test-image-input">
+                        <input type="file" id="uploadImage" name="uploadImage" class="input-file" onchange="fileValidation()" />
+                        <label for="uploadImage" class="btn btn-primary btn-lg">Choose file</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="car-detail" lang="bn">
+                    <div class="car-plate">
+                        <div class="car-plate-upper">
+                            <p id="carPlateUpper"></p>
+                        </div>
+                        <div class="car-plate-lower">
+                            <p id="carPlateLower" ></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="number-plate">
+                    <img id="numberPlate">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-light bg-dark">
+    <p class="navbar-text">
+        <span class="text-muted" style="text-align: center">Developed by Head Blocks.</span>
+    </p>
+</nav>
+
+
+<script src="js/script.js"></script>
 
 </body>
 </html>

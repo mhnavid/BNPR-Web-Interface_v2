@@ -1,5 +1,5 @@
 .img-detail-container{
-
+    margin: 50px auto;
 }
 
 .img-slider{
@@ -12,7 +12,7 @@
     /*Instead of height we will use padding*/
     padding-top: 320px; /*That helps bring the labels down*/
 
-    margin: 70px auto;
+    margin: 50px auto;
 
     /*Lets add a shadow*/
     /*box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);*/
@@ -66,4 +66,64 @@ On click the images will be displayed at normal size to complete the effect
 */
 .slider input[name='slide_switch']:checked+label+img {
     transform: scale(1);
+}
+
+.bottom-content-view{
+    margin: 50px auto;
+    margin-top: 20px;
+    width: 642px;
+    line-height: 0px;
+}
+*:not(.bottom-content-view){
+    box-sizing : border-box;
+}
+.test-image-upload{
+    text-align: center;
+    width: 212px;
+    float: left;
+}
+.test-image-title{
+    font-size: 18px;
+    font-weight: 600;
+}
+.test-image-input{
+    margin-top: 5px;
+}
+.input-file {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.car-detail{
+    text-align: center;
+    width: 212px;
+    float: left;
+}
+.car-plate{
+    width: 160px;
+    height: 50px;
+    background-color: #dddddd;
+    margin: 0 auto;
+    padding: 15px 0px 0px 0px;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+.car-plate-upper{
+    font-size: 14px;
+}
+.car-plate-lower{
+    font-size: 16px;
+    font-weight: 900;
+}
+.number-plate{
+    width: 212px;
+    margin-left: 10px;
+}
+.number-plate img{
+    height: 50px;
+    width: 160px;
+    position: absolute;
+    object-fit: contain;
 }
